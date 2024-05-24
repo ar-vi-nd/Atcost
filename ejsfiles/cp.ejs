@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Change Password</h1>
+
+    <!-- <form method="post" action="/changepassword">
+         -->
+    <form id="form">
+    <label for="oldp">old password</label>
+    <input type="password" id="oldp" name="oldpassword" required>
+
+    <label for="newp">new password</label>
+    <input type="password" id="newp" name="newpassword" required>
+
+    <input type="Submit" value="Submit" id="submitb">
+    </form>
+
+    <div id="message"></div>
+
+
+    <!-- <%= error%> -->
+
+    <script>
+        let form = document.getElementById("form")
+        let button = document.getElementById("submitb")
+        let npassword = document.getElementById("newp")
+        let opassword = document.getElementById("oldp")
+        console.log(form)
+
+        form.addEventListener("submit", function (event) {
+            console.log(event)
+            event.preventDefault();
+            let val = 1;
+
+            if (!(/^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})/.test(opassword.value))) {
+                val = 0;
+                // passErr.style.display = 'block';
+                opassword.value = "";
+            }
+
+            if (!(/^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})/.test(npassword.value))) {
+                val = 0;
+                // passErr.style.display = 'block';
+                npassword.value = "";
+            }
+
+            if (val == 1) {
+                formSub();
+            }
+        })
+
+
+        function formSub() {
+            console.log("here")
+            let form = document.getElementById("form");
+            let data = {
+                //   username: form.elements["username"].value,
+                //   email: form.elements["email"].value,
+                //   name: form.elements["name"].value,
+                opassword: form.elements[0].value,
+                npassword: form.elements[1].value,
+            };
+
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", "/changepassword");
+            xhr.setRequestHeader("content-type", "application/json");
+            xhr.send(JSON.stringify(data));
+
+            xhr.addEventListener("load", function () {
+                if (xhr.status == 200) {
+                    if (xhr.responseText == "0") {
+                        //       let message = document.getElementById("message");
+                        //       message.innerText = "e-mail Already in Use";
+                        //       message.style.display = "block";
+                        //       message.style.background = "#ff0000";
+                        //       // Hide the message element after 2 seconds
+                        //       setTimeout(() => {
+                        //         message.style.display = "none";
+                        //       }, 1600);
+
+                        let message = document.getElementById("message");
+                        message.innerText = "Password Changed Successfullly, redirecting to home page";
+                        message.style.display = "block";
+                        message.style.background = "#4CAF50";
+
+                        setTimeout(() => {
+                            message.style.color = "#000000";
+                            message.style.display = "none"
+                        window.location.href = "/login"
+
+                        }, 2900)
+
+
+                    }
+
+                    else if (xhr.response == "-1") {
+
+
+
+                        let message = document.getElementById("message");
+                        message.innerText = "Incorrect Old Password";
+                        message.style.display = "block";
+                        message.style.background = "#4CAF50";
+                        //         // Hide the message element after 2 seconds
+                        //         setTimeout(() => {
+                        //             message.style.background = "#FFFF00";
+                        //             message.style.color = "#000000";
+                        //             message.innerText = "Waiting For email Verification";},1200)
+
+                        setTimeout(() => {
+                            message.style.color = "#000000";
+                            message.style.display = "none"
+                        }, 2900)
+
+                        //         setTimeout(function(){
+                        //             window.location.href = "/"},3000)
+
+                        // window.location.assign('http://127.0.0.1:5500/signup',{message:"Account already exist, please signin"});
+
+
+
+                    }
+                    else{
+                        window.location.href = "/login"
+                    }
+                }
+            });
+        }
+
+    </script>
+
+
+
+
+
+        
+
+
+</body>
+
+</html>

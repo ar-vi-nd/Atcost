@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+
+        body{
+            background-color: rgb(148, 132, 111);
+        }
+            .container {
+                width: 1920px;
+                height: 1080px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        
+            #form {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 50%;
+                height: 500px;
+                background-color: rgba(34, 120, 160, 0.288);
+                align-items: center;
+        
+            }
+        
+            input {
+                z-index: 1;
+                height: 60px;
+                width: 99%;
+                border: 1px solid black;
+                border-radius: 2px;
+                background-color: white;
+        
+            }
+        
+            #Submit {
+                background-color: rgb(0, 139, 253);
+            }
+        </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+
+
+
+        <form method="POST" action="/resetpassword">
+
+            <h1>Reset Password</h1>
+
+
+            <input type="text" placeholder="username" name="username" required />
+            <input type="email" placeholder="email" name="email" required />
+            <input type="text" placeholder="name" name="name" required />
+            <input type="password" placeholder="password" name="password" required />
+            <input type="Submit" value="Submit" />
+        </form>
+
+        <div>
+            <%=error%>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

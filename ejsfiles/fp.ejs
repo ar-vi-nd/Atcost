@@ -1,0 +1,163 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            
+            background-color:rgb(148, 132, 111) ;
+        }
+        .container {
+            width: 1920px;
+            height: 1080px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* background-color: antiquewhite; */
+
+            justify-content: center;
+        }
+
+        #form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 50%;
+            height: 500px;
+            background-color: rgba(34, 120, 160, 0.288);
+            align-items: center;
+
+        }
+
+        input {
+            z-index: 1;
+            height: 60px;
+            width: 99%;
+            border: 1px solid black;
+            border-radius: 2px;
+            background-color: white;
+
+        }
+
+        #submitb {
+            background-color: rgb(0, 139, 253);
+            color: white;
+        }
+    </style>
+
+    
+</head>
+<body>
+
+    <div class="container">
+
+
+    <form method="POST" action="/forgotpassword" id="form">
+    <h1>Reset Password</h1>
+
+ 
+     <input type="text" placeholder="username" name="username" required />
+     <input type="email" placeholder="email" name="email" required />
+     <input type="text" placeholder="name" name="name" required />
+     <input type="password" placeholder="password" name="password" required />
+     <input type="Submit" value="Submit" id="submitb"/>
+    </form>
+ 
+    <div><%=error%></div>
+
+</div>
+    
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+
+    <style>
+        body {
+            background: url('https://images.unsplash.com/photo-1618556782763-ac991d2fdac8') center/cover fixed no-repeat;
+            background-color: rgba(248, 249, 250, 0.8); /* Slightly translucent white */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 50%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            background-color: rgba(225, 229, 231, 0.904);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        input {
+            height: 40px;
+            width: 100%;
+            border: 1px solid black;
+            border-radius: 2px;
+            margin-bottom: 15px;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: white;
+        }
+
+        #submitb {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        #submitb:hover {
+            background-color: #0056b3;
+        }
+
+        div {
+            margin-top: 20px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form method="POST" action="/forgotpassword" id="form">
+            <h1>Reset Password</h1>
+            <input type="text" placeholder="Username" name="username" required />
+            <input type="email" placeholder="Email" name="email" required />
+            <input type="text" placeholder="Name" name="name" required />
+            <input type="submit" value="Submit" id="submitb" />
+        </form>
+        <div><%= error %></div>
+    </div>
+
+</body>
+
+</html>

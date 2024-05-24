@@ -1,0 +1,360 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <style>
+        .headerclass {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid black;
+            align-items: center;
+            background-color: rgb(8, 118, 126);
+            color: rgb(231, 222, 222);
+            height: 150px;
+            width: 1000px;
+
+        }
+
+        body {
+            background-color: aquamarine;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+        }
+
+        .container {
+            width: 50%;
+            display: flex;
+            justify-content: space-evenly;
+            height: 100px;
+            align-items: center;
+            background-color: rgba(69, 100, 104, 0.521);
+        }
+
+        .button {
+            height: 50px;
+            width: 100px;
+            align-self: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="headerclass">
+        <div>
+            <%- include("header",{naem:name});%>
+        </div>
+        
+
+        <div class="buttondiv">
+            <div><a href="/login"><button class="btn btn-primary">login</button></a></div>
+            <div><a href="/signup"><button class="btn btn-primary">signup</button></a></div>
+
+        </div>
+    </div>
+
+    <div>
+        <h1>WELCOME TO OUR ECOMMERCE WEBSITE</h1>
+    </div>
+
+
+    <div class="container">
+        <a href="/login"><button class="button btn btn-primary">login</button></a>
+        <a href="signup"><button class="button btn btn-primary">signup</button></a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-Commerce Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1493673272479-a20888bcee10?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8ZWNvbW1lcmNlLGRhcmt8fHx8fHwxNzA2OTA0NDgy&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            /* height: 100vh; */
+        }
+
+        .headerclass {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(8, 118, 126, 0.8);
+    color: rgb(231, 222, 222);
+    padding: 20px;
+    width: 90%;
+    height: 10vh;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.headerclass h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.logo {
+    width: 80px; /* Adjust size as needed */
+    height: auto;
+}
+
+.buttondiv {
+    display: flex;
+    gap: 10px;
+}
+
+
+.buttondiv {
+    display: flex;
+    gap: 10px;
+}
+
+.headerclass h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.buttondiv {
+    display: flex;
+    gap: 10px;
+}
+
+
+        .buttondiv {
+            display: flex;
+            gap: 10px;
+        }
+
+        .container {
+            width: 60%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: rgba(69, 100, 104, 0.8);
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .button {
+            height: 60px;
+            width: 200px;
+            font-size: 20px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-size: 48px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .special-offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.special-offer img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.special-offer p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #fff;
+    max-width: 80%;
+    margin: auto;
+}
+
+.featured-products {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.product-card {
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.product-card p {
+    font-size: 16px;
+    color: #333;
+}
+
+.product-card button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background-color: #0056b3;
+}
+
+    .footer {
+    background-color: rgba(8, 118, 126, 0.8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+    </style>
+</head>
+
+<!-- ... (previous code) -->
+
+<body>
+
+    <div class="headerclass">
+        <img src="https://images.unsplash.com/photo-1618556782763-ac991d2fdac8?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=100&ixid=MnwxfDB8MXxyYW5kb218MHx8bG9nb3x8fHx8fDE3MDY5MDU0NjQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=100" alt="Logo" class="logo">
+        <div>
+            <h2 style="margin: 0;">ATCOST</h2>
+        </div>
+
+        <div class="buttondiv">
+            <div><a href="/login"><button class="btn btn-primary">Login</button></a></div>
+            <div><a href="/signup"><button class="btn btn-primary">Signup</button></a></div>
+        </div>
+    </div>
+
+    <h1>Discover Amazing Products at Great Prices!</h1>
+
+    <h4>Explore our wide range of products and
+        enjoy a seamless shopping experience.</h4>
+
+    <div class="container">
+        
+       <div>Already a customer <a href="/login"> <button class="button btn btn-primary">Login</button></a></div>
+       <div>New here <a href="signup"><button class="button btn btn-primary">Signup</button></a></div>
+    </div>
+
+    <section class="featured-products">
+        <h2 style="text-align: center; margin-top: 50px;">Featured Products</h2>
+        <div class="product-list">
+            <!-- Include featured product cards here -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1520931061294-db3e762a9273?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8cHJvZHVjdHx8fHx8fDE3MDY5MDU2NDk&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="Product 1">
+                <h3><p>Jet Lighter</p></h3>
+                <p>$4.99</p>
+                <button class="btn btn-primary">View Details</button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1584735174965-48c48d7edfde?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8cHJvZHVjdHx8fHx8fDE3MDY5MDU2NTY&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="Product 1">
+                <h3><p>Nike Air Jordans</p></h3>
+                <p>$399.99</p>
+                <button class="btn btn-primary">View Details</button>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1555375771-14b2a63968a9?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8cHJvZHVjdHx8fHx8fDE3MDY5MDU2Njg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300" alt="Product 1">
+                <h3><p>iphone 11</p></h3>
+                <p>$75.99</p>
+                <button class="btn btn-primary">View Details</button>
+            </div>
+            <!-- Add more product cards as needed -->
+        </div>
+    </section>
+
+    <section class="special-offer">
+        <h2 style="text-align: center; margin-top: 50px;">Special Offer</h2>
+        <div class="offer-details">
+            <img src="https://images.unsplash.com/photo-1573768664596-0314e56ac095?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8c3BlY2lhbC1vZmZlcnx8fHx8fDE3MDY5MDYwNzc&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600" alt="Special Offer Image" style="width: 100%;">
+            <p style="text-align: center; margin-top: 20px; font-size: 18px;">
+                Don't miss our exclusive special offer! Limited time only.
+                Use code <strong>SPECIAL20</strong> for an extra 20% off on non-alcoholic drinks.
+            </p>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>&copy; 2024 ATCOST. All rights reserved.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
+
+</html>
